@@ -1,0 +1,8 @@
+<div class="ui dlg full-picks">
+  <anvil-component type="Label" name="heading" prop:text="Your five is full" prop:role='["dlg-title"]'></anvil-component>
+  <p class="muted">Choose the car to swap out. Its notes go with it.</p>
+  <anvil-component type="RepeatingPanel" name="cars_panel" prop:item_template="CarChoice.Items.SwapRow" prop:role='["fp-list"]'></anvil-component>
+  <div class="ui-row end">
+    <anvil-component type="Button" name="cancel_button" prop:text="Keep my five" prop:role='["btn", "btn-ghost"]'></anvil-component>
+  </div>
+</div>

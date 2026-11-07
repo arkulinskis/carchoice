@@ -1,0 +1,26 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap ls-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Saved listings" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+        <anvil-component type="Button" name="add_button" prop:text="Save a listing" prop:role='["btn", "btn-primary", "ic-plus"]'></anvil-component>
+      </div>
+      <div class="ls-bar">
+        <label class="ui-field"><span>Car</span><anvil-component type="DropDown" name="car_dd"></anvil-component></label>
+        <label class="ui-field"><span>Sort</span><anvil-component type="DropDown" name="sort_dd"></anvil-component></label>
+        <anvil-component type="CheckBox" name="hide_box" prop:text="Hide the ones marked Not for me"></anvil-component>
+      </div>
+      <anvil-component type="RepeatingPanel" name="list_panel" prop:item_template="CarChoice.Items.ListingRow" prop:role='["ls-list"]'></anvil-component>
+      <div class="ui-empty" anvil:name="empty">
+        <i class="ic ic-link"></i>
+        <anvil-component type="Label" name="empty_title" prop:text="No listings saved yet" prop:role='["empty-h"]'></anvil-component>
+        <p>When you find a car for sale, paste its link here instead of bookmarking it. Add the price, year and mileage and CarChoice shows which one is priced well.</p>
+        <a class="ui-btn" href="#picks">Find your five for sale</a>
+      </div>
+      <p class="small muted ls-howto">How the price check works: for each model, listings in the same currency are put on the same footing, assuming a car loses about 12% of its value a year and 3% per 10,000 km, then compared with each other. It's a guide to spot the well-priced one among those you found, not a valuation.</p>
+    </div>
+  </anvil-block>
+</anvil-form>

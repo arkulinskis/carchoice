@@ -1,0 +1,31 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap br-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Car brands" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+      </div>
+      <div class="br-bar">
+        <label class="ui-field"><span>Search</span><anvil-component type="TextBox" name="search_box" prop:placeholder="Brand or group"></anvil-component></label>
+        <label class="ui-field"><span>Country</span><anvil-component type="DropDown" name="country_dd"></anvil-component></label>
+        <label class="ui-field"><span>Group</span><anvil-component type="DropDown" name="group_dd"></anvil-component></label>
+        <anvil-component type="CheckBox" name="has_box" prop:text="Only brands with models in the table"></anvil-component>
+      </div>
+      <div class="br-scroll" tabindex="0" role="region" aria-label="Brands table">
+        <div class="br-table" role="table" aria-label="Car brands">
+          <div class="br-row br-head" role="row">
+            <span class="br-c" role="columnheader">Brand</span><span class="br-c" role="columnheader">Country</span>
+            <span class="br-c br-group" role="columnheader">Group</span><span class="br-c num" role="columnheader">Founded</span>
+            <span class="br-c" role="columnheader">In the table</span><span class="br-c" role="columnheader">US warranty</span>
+            <span class="br-c" role="columnheader">Website</span>
+          </div>
+          <anvil-component type="RepeatingPanel" name="brands_panel" prop:item_template="CarChoice.Items.BrandRow" prop:role='["br-rows"]'></anvil-component>
+        </div>
+      </div>
+      <anvil-component type="Label" name="none" prop:text="No brand matches. Clear the search or pick another country." prop:role='["msg-note"]' prop:visible="false"></anvil-component>
+      <p class="small muted br-note">Warranty: basic / powertrain years for new cars in the US (Europe-only brands are blank). Groups change hands: check the brand's own site for the latest.</p>
+    </div>
+  </anvil-block>
+</anvil-form>

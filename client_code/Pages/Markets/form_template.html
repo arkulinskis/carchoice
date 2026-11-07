@@ -1,0 +1,38 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap mk-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Where people sell cars" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+      </div>
+      <div class="mk-regions" role="group" aria-label="Region">
+        <anvil-component type="Button" name="r_all" prop:text="Everywhere" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_us" prop:text="US" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_ca" prop:text="Canada" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_uk" prop:text="UK" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_eu" prop:text="Europe" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_bt" prop:text="Baltics" prop:role='["seg"]'></anvil-component>
+        <anvil-component type="Button" name="r_au" prop:text="Australia" prop:role='["seg"]'></anvil-component>
+      </div>
+      <div class="mk-grid">
+        <div class="mk-list-col">
+          <anvil-component type="RepeatingPanel" name="markets_panel" prop:item_template="CarChoice.Items.MarketRow" prop:role='["mk-list"]'></anvil-component>
+        </div>
+        <aside class="mk-tips ex-card" aria-label="Buying used safely">
+          <anvil-component type="Label" name="tips_title" prop:text="Before you pay" prop:role='["ex-h"]'></anvil-component>
+          <ol class="mk-steps">
+            <li><b>Know the going rate.</b> Compare with a price guide and with the other listings you saved for the same model.</li>
+            <li><b>Get the history.</b> A vehicle history report (Carfax or AutoCheck in the US, Carfax Canada, an HPI check in the UK) shows accidents, write-offs and mileage records.</li>
+            <li><b>Check the VIN.</b> It should match the papers, the windshield plate and the report.</li>
+            <li><b>Look for recalls.</b> Open recalls are free to fix at a dealer.</li>
+            <li><b>Pay for an inspection.</b> An independent mechanic finds what photos hide.</li>
+            <li><b>Meet safely, pay safely.</b> See the car and the papers before sending money. Never pay a deposit to a seller you haven't met.</li>
+          </ol>
+          <p class="small muted">Prices on marketplaces are asking prices: there is often room to negotiate, more with private sellers.</p>
+        </aside>
+      </div>
+    </div>
+  </anvil-block>
+</anvil-form>

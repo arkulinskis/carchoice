@@ -1,0 +1,30 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap cm-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Compare side by side" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+        <div class="ui-row">
+          <div class="ui-seg" role="group" aria-label="Units">
+            <button type="button" anvil:name="u_metric" anvil:on-dom:click="self.units_click" data-u="metric">Metric</button>
+            <button type="button" anvil:name="u_imperial" anvil:on-dom:click="self.units_click" data-u="imperial">Imperial</button>
+          </div>
+          <anvil-component type="CheckBox" name="diff_box" prop:text="Only rows that differ"></anvil-component>
+        </div>
+      </div>
+      <div class="ui-empty" anvil:name="empty">
+        <i class="ic ic-scale"></i>
+        <h2>Pick at least two cars</h2>
+        <p>Star cars on Explore (up to five), then compare them here row by row.</p>
+        <a class="ui-btn primary" href="#explore">Open Explore</a>
+      </div>
+      <div class="cm-scroll" anvil:name="table_box" tabindex="0" role="region" aria-label="Comparison table">
+        <div class="cm-table" role="table" aria-label="Your cars side by side" anvil:name="table">
+          <anvil-component type="RepeatingPanel" name="rows_panel" prop:item_template="CarChoice.Items.CompareRow" prop:role='["cm-rows"]'></anvil-component>
+        </div>
+      </div>
+    </div>
+  </anvil-block>
+</anvil-form>

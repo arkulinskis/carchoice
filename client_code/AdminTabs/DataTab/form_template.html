@@ -1,0 +1,51 @@
+<div class="ui dt-wrap">
+  <div class="dt-grid">
+    <section class="ui-card dt-import">
+      <h2>Import car data</h2>
+      <p class="muted small">A spreadsheet saved as CSV (Excel: File, Save as, "CSV UTF-8"), one row per model. <code>make</code> and <code>model</code> are required; any column whose name isn't known yet becomes a new filter and column. Empty cells never wipe what's there.</p>
+      <div class="dt-file">
+        <anvil-component type="FileLoader" name="file_loader" prop:text="Choose a CSV file" prop:role='["dt-loader"]'></anvil-component>
+        <anvil-component type="Label" name="file_name" prop:role='["fine-print"]'></anvil-component>
+      </div>
+      <label class="ui-field"><span>Or paste the rows</span>
+        <anvil-component type="TextArea" name="paste_box" prop:placeholder="make,model,price,hp,...&#10;Toyota,RAV4,31900,226,..." prop:height="120"></anvil-component>
+      </label>
+      <div class="dt-opts">
+        <label class="ui-field"><span>Where is it from?</span><anvil-component type="TextBox" name="source_box" prop:placeholder="e.g. Auto Katalog 2026, p. 112-140"></anvil-component></label>
+        <label class="ui-field"><span>Cars already in the table</span><anvil-component type="DropDown" name="mode_dd"></anvil-component></label>
+      </div>
+      <div class="ui-row">
+        <anvil-component type="Button" name="preview_button" prop:text="Check it first" prop:role='["btn", "ic-search"]'></anvil-component>
+        <anvil-component type="Button" name="import_button" prop:text="Import" prop:role='["btn", "btn-primary", "ic-download"]'></anvil-component>
+      </div>
+      <div class="dt-result" anvil:name="result_box">
+        <anvil-component type="Label" name="result_title" prop:role='["strong"]'></anvil-component>
+        <anvil-component type="Label" name="result_text" prop:role='["dt-text"]'></anvil-component>
+        <anvil-component type="Label" name="result_errors" prop:role='["msg-error", "dt-errors"]'></anvil-component>
+      </div>
+    </section>
+
+    <section class="ui-card dt-help">
+      <h2>Downloads</h2>
+      <p class="muted small">Edit everything in a spreadsheet and import it back: the export uses the same columns the importer reads.</p>
+      <div class="ui-row">
+        <anvil-component type="Button" name="export_button" prop:text="All car data (CSV)" prop:role='["btn", "ic-download"]'></anvil-component>
+        <anvil-component type="Button" name="template_button" prop:text="Empty template" prop:role='["btn", "btn-ghost", "ic-download"]'></anvil-component>
+      </div>
+      <h3>Values the importer understands</h3>
+      <ul class="dt-list small">
+        <li><b>Numbers</b>: 27,500 / 27 500 / $27,500 / 6,1 all work. Metric units (mm, kg, km, L/100km, litres).</li>
+        <li><b>Several values</b> (fuel, drive, gearbox, regions): separate with <code>/</code>, e.g. <code>Hybrid/Plug-in hybrid</code>.</li>
+        <li><b>Yes/no</b>: yes, no, y, n, 1, 0, x.</li>
+        <li><b>Shortcuts</b>: fuel P D H PH E, gearbox A M CVT DCT 1, regions NA EU UK AU AS ALL, status D = discontinued.</li>
+        <li><b>Features</b> in one column: <code>std 360 roof hud heatpump row3 man</code>.</li>
+        <li>Known column names include Horsepower, MSRP, Transmission, Drivetrain, Seating, Curb weight, Euro NCAP.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="dt-log">
+    <h2>Imports</h2>
+    <anvil-component type="RepeatingPanel" name="imports_panel" prop:item_template="CarChoice.Items.ImportRow" prop:role='["im-list"]'></anvil-component>
+  </section>
+</div>

@@ -1,0 +1,14 @@
+<div class="ui dlg save-search">
+  <anvil-component type="Label" name="heading" prop:text="Save this search" prop:role='["dlg-title"]'></anvil-component>
+  <div class="ui-stack">
+    <anvil-component type="Label" name="summary" prop:role='["fine-print"]'></anvil-component>
+    <label class="ui-field"><span>Name</span>
+      <anvil-component type="TextBox" name="name_box" prop:placeholder="e.g. Hybrid SUVs under 35k"></anvil-component>
+    </label>
+    <anvil-component type="Label" name="message" prop:role='["msg-error"]' prop:visible="false"></anvil-component>
+    <div class="ui-row end">
+      <anvil-component type="Button" name="cancel_button" prop:text="Cancel" prop:role='["btn", "btn-ghost"]'></anvil-component>
+      <anvil-component type="Button" name="save_button" prop:text="Save search" prop:role='["btn", "btn-primary", "ic-check"]'></anvil-component>
+    </div>
+  </div>
+</div>

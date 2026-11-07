@@ -1,0 +1,21 @@
+---
+custom_component: true
+events:
+  - name: x_change
+    parameters:
+      - name: summary
+  - name: x_pick
+    parameters:
+      - name: car_id
+  - name: x_open
+    parameters:
+      - name: car_id
+---
+<div class="cx-wrap">
+  <div class="cx-host" anvil:dom-node="host">
+    <div class="cx-loading" aria-busy="true" aria-label="Loading the catalogue">
+      <div class="cx-load-bar"></div>
+      <div class="cx-load-body"><div class="ui-skel cx-load-rail"></div><div class="ui-skel cx-load-table"></div></div>
+    </div>
+  </div>
+</div>

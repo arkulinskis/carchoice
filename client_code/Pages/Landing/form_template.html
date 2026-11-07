@@ -1,0 +1,98 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="page-landing">
+      <section class="lp-hero">
+        <div class="lp-hero-in">
+          <div class="lp-copy">
+            <h1>Narrow hundreds of cars down to <em>your five</em></h1>
+            <p class="lp-lead">CarChoice puts every model in one table with more than 40 filters: price, power, range, cargo, seats, towing, features. Keep the five that fit, search the marketplaces for them, and buy the one that's priced well.</p>
+            <div class="lp-cta">
+              <a class="ui-btn primary lg" href="#explore">Open Explore <i class="ic ic-arrow"></i></a>
+              <a class="ui-btn lg" href="#auth/signup" anvil:name="signup_link">Create a free account</a>
+            </div>
+            <div class="lp-proof">
+              <span><i class="ic ic-check"></i>No account needed to explore</span>
+              <span><i class="ic ic-check"></i><anvil-component type="Label" name="count_label" prop:text="268 models from 52 brands" prop:role='["lp-inline"]'></anvil-component></span>
+              <span><i class="ic ic-check"></i>Free, no ads</span>
+            </div>
+          </div>
+          <div class="lp-demo">
+            <anvil-component type="CarChoice.Components.HeroDemo" name="hero"></anvil-component>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section lp-how" id="how">
+        <div class="lp-in">
+          <h2>From hundreds to one, in three moves</h2>
+          <ol class="lp-steps">
+            <li>
+              <h3>Filter like a researcher</h3>
+              <p>Range sliders with a histogram of what's left, choice lists with live counts, yes/no features. Pick your columns, sort any of them, switch between metric and imperial.</p>
+            </li>
+            <li>
+              <h3>Keep five</h3>
+              <p>Star the cars that fit. Rank them, write notes, and compare them side by side with the best figure in every row marked.</p>
+            </li>
+            <li>
+              <h3>Buy the one priced well</h3>
+              <p>Open ready-made searches on the marketplaces of your region, save the listings you like, and see which one is priced best for its age and mileage.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="lp-section">
+        <div class="lp-in">
+          <h2>Made for people who read spec sheets for fun</h2>
+          <div class="lp-feats">
+            <div class="lp-feature"><i class="ic ic-sliders"></i><h3>Every spec in one table</h3><p>Sortable columns, a median row for whatever you've filtered, compact rows for big screens.</p></div>
+            <div class="lp-feature"><i class="ic ic-link"></i><h3>Searches you can share</h3><p>The address holds your filters. Copy it, or save the search under a name and come back to it.</p></div>
+            <div class="lp-feature"><i class="ic ic-star"></i><h3>Your five, ranked</h3><p>Notes per car, a side-by-side comparison, and buttons that open the right searches for each one.</p></div>
+            <div class="lp-feature"><i class="ic ic-book"></i><h3>Listings out of your bookmarks</h3><p>Paste the links you find with price, year and mileage. Mark them watching, contacted, seen or bought.</p></div>
+            <div class="lp-feature"><i class="ic ic-tag"></i><h3>A fair-price check</h3><p>Listings of the same model are put on the same footing for age and mileage, so the bargain stands out.</p></div>
+            <div class="lp-feature"><i class="ic ic-database"></i><h3>Built to grow</h3><p>New official data comes in as a spreadsheet; any new measurement becomes a filter and a column on its own.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section lp-data">
+        <div class="lp-in lp-data-in">
+          <div>
+            <h2>Where the numbers come from</h2>
+            <p>The starter data covers current models from more than 50 brands, compiled from manufacturers' published specifications for a typical trim. Treat each figure as a starting point and confirm it with the maker before you buy.</p>
+            <p>Official sources are being added: government fuel-economy datasets, manufacturers' spec sheets and annual catalogues. Prices are approximate US starting prices; Europe-only models are converted from euros.</p>
+          </div>
+          <dl class="lp-facts">
+            <div><dt>Filters</dt><dd>44</dd></div>
+            <div><dt>Regions with marketplaces</dt><dd>6</dd></div>
+            <div><dt>Brands in the directory</dt><dd>76</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="lp-section">
+        <div class="lp-in">
+          <h2>Questions</h2>
+          <div class="lp-faq">
+            <details><summary>Is it free?</summary><p>Yes. Exploring needs no account. A free account keeps your five, your saved searches and the listings you find, on any device.</p></details>
+            <details><summary>Does CarChoice sell cars?</summary><p>No. It points you to the marketplaces where people sell them. No listing is paid to appear, and CarChoice takes no cut.</p></details>
+            <details><summary>How accurate are the specs?</summary><p>They are approximate figures for a typical trim, gathered from what manufacturers publish. Trims, model years and markets differ, so check the maker's spec sheet for the exact car you buy.</p></details>
+            <details><summary>Which countries does it work in?</summary><p>The catalogue covers cars sold in North America, Europe, the UK, Australia and Asia. Ready-made searches cover marketplaces in the US, Canada, the UK, Europe, the Baltics and Australia.</p></details>
+            <details><summary>What does the price check do?</summary><p>For each model, it puts the listings you saved on the same footing (about 12% of value per year of age and 3% per 10,000 km) and compares them with each other. It helps you spot the well-priced one among those you found; it isn't a valuation.</p></details>
+            <details><summary>A car or a figure is missing. Can I tell you?</summary><p>Please do, with Submit feedback at the bottom of the page. Published data you can point to (a brochure, a spec sheet, a dataset) is the most useful.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-section">
+        <div class="lp-in">
+          <div class="lp-band">
+            <div><h2>Start with the whole market</h2><p>Open the table, set three filters, and see what's left.</p></div>
+            <a class="ui-btn lg lp-band-btn" href="#explore">Open Explore</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </anvil-block>
+</anvil-form>

@@ -1,0 +1,11 @@
+<div class="br-wrap">
+  <div class="br-row" role="row">
+    <span class="br-c br-name" role="cell"><anvil-component type="Label" name="name" prop:role='["br-title"]' bind:text="self.item['name']"></anvil-component></span>
+    <span class="br-c" role="cell"><anvil-component type="Label" name="country" bind:text="self.item['country'] or '–'"></anvil-component></span>
+    <span class="br-c br-group" role="cell"><anvil-component type="Label" name="group" bind:text="self.item['group'] or '–'"></anvil-component></span>
+    <span class="br-c num" role="cell"><anvil-component type="Label" name="founded"></anvil-component></span>
+    <span class="br-c" role="cell"><a anvil:name="models_link" href="#explore"><anvil-component type="Label" name="models"></anvil-component></a><anvil-component type="Label" name="no_models" prop:text="None yet" prop:role='["faint"]'></anvil-component></span>
+    <span class="br-c" role="cell"><anvil-component type="Label" name="warranty"></anvil-component></span>
+    <span class="br-c" role="cell"><anvil-component type="Link" name="site_link" prop:text="Website" prop:role='["br-site"]' bind:url="self.item['website']"></anvil-component></span>
+  </div>
+</div>

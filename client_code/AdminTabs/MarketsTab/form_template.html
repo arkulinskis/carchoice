@@ -1,0 +1,7 @@
+<div class="ui mt-wrap">
+  <div class="ui-row between mt-head">
+    <p class="muted small">Marketplaces, dealers, auctions and price guides people see on Where to buy and in every search list. A search address with {q} opens the site's own search; without one, CarChoice uses a Google search of the site.</p>
+    <anvil-component type="Button" name="add_button" prop:text="Add a marketplace" prop:role='["btn", "btn-primary", "ic-plus"]'></anvil-component>
+  </div>
+  <anvil-component type="RepeatingPanel" name="markets_panel" prop:item_template="CarChoice.Items.MarketEditRow" prop:role='["me-list"]'></anvil-component>
+</div>

@@ -1,0 +1,13 @@
+<div class="sp-wrap">
+  <div class="sp-row">
+    <div class="sp-l">
+      <anvil-component type="Label" name="label" prop:role='["sp-label"]' bind:text="self.item['label']"></anvil-component>
+      <anvil-component type="Label" name="help" prop:role='["sp-help"]' bind:text="self.item['help']" bind:visible="bool(self.item['help'])"></anvil-component>
+    </div>
+    <anvil-component type="Label" name="value" prop:role='["sp-value"]'></anvil-component>
+    <div class="sp-rank" anvil:name="rank_box">
+      <div class="sp-bar" aria-hidden="true"><i anvil:name="dot"></i></div>
+      <anvil-component type="Label" name="rank" prop:role='["sp-rank-t"]'></anvil-component>
+    </div>
+  </div>
+</div>

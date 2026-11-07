@@ -1,0 +1,44 @@
+<div class="ui dlg add-listing">
+  <anvil-component type="Label" name="heading" prop:text="Save a listing" prop:role='["dlg-title"]'></anvil-component>
+  <p class="muted small">Paste the link to a car you found for sale. Add the price, year and mileage and CarChoice compares it with the other listings you saved for the same model.</p>
+  <div class="al-grid">
+    <label class="ui-field al-wide"><span>Link to the listing</span>
+      <anvil-component type="TextBox" name="url_box" prop:placeholder="https://..."></anvil-component>
+    </label>
+    <label class="ui-field al-wide"><span>Title <em>(optional)</em></span>
+      <anvil-component type="TextBox" name="title_box" prop:placeholder="e.g. 2022 RAV4 XLE, one owner"></anvil-component>
+    </label>
+    <label class="ui-field al-wide"><span>Which car</span>
+      <anvil-component type="DropDown" name="car_dd"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Price</span>
+      <anvil-component type="TextBox" name="price_box" prop:placeholder="27500"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Currency</span>
+      <anvil-component type="DropDown" name="currency_dd"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Year</span>
+      <anvil-component type="TextBox" name="year_box" prop:placeholder="2022"></anvil-component>
+    </label>
+    <label class="ui-field"><span anvil:dom-node="km_cap">Mileage (km)</span>
+      <anvil-component type="TextBox" name="km_box" prop:placeholder="45000"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Where <em>(optional)</em></span>
+      <anvil-component type="TextBox" name="location_box" prop:placeholder="Laval, QC"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Seller <em>(optional)</em></span>
+      <anvil-component type="TextBox" name="seller_box" prop:placeholder="Dealer or private"></anvil-component>
+    </label>
+    <label class="ui-field"><span>Status</span>
+      <anvil-component type="DropDown" name="status_dd"></anvil-component>
+    </label>
+    <label class="ui-field al-wide"><span>Notes <em>(optional)</em></span>
+      <anvil-component type="TextArea" name="notes_box" prop:placeholder="Service history, tyres, what to ask..." prop:height="70"></anvil-component>
+    </label>
+  </div>
+  <anvil-component type="Label" name="message" prop:role='["msg-error"]' prop:visible="false"></anvil-component>
+  <div class="ui-row end">
+    <anvil-component type="Button" name="cancel_button" prop:text="Cancel" prop:role='["btn", "btn-ghost"]'></anvil-component>
+    <anvil-component type="Button" name="save_button" prop:text="Save listing" prop:role='["btn", "btn-primary", "ic-check"]'></anvil-component>
+  </div>
+</div>

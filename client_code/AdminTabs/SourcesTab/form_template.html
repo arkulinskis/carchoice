@@ -1,0 +1,10 @@
+<div class="ui st-wrap">
+  <div class="ui-row between st-head">
+    <div>
+      <h2>Data sources</h2>
+      <p class="muted small">Books, manuals, datasets and brochures to get, being got, or already imported. Free government datasets come first: they can be imported as soon as a column map is written. Facts can usually be re-entered freely; copying a whole book's tables may need the publisher's permission.</p>
+    </div>
+    <anvil-component type="Button" name="add_button" prop:text="Add a source" prop:role='["btn", "btn-primary", "ic-plus"]'></anvil-component>
+  </div>
+  <anvil-component type="RepeatingPanel" name="sources_panel" prop:item_template="CarChoice.Items.SourceRow" prop:role='["so-list"]'></anvil-component>
+</div>

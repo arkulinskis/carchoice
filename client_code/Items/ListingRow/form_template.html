@@ -1,0 +1,22 @@
+<div class="ls-wrap">
+  <article class="ls-row" anvil:name="row">
+    <div class="ls-main">
+      <anvil-component type="Link" name="title_link" prop:role='["ls-title"]' bind:text="self.item['title']" bind:url="self.item['url']"></anvil-component>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print", "ls-meta"]'></anvil-component>
+      <anvil-component type="Label" name="notes" prop:role='["ls-notes"]' bind:text="self.item['notes']" bind:visible="bool(self.item['notes'])"></anvil-component>
+    </div>
+    <div class="ls-price">
+      <anvil-component type="Label" name="price" prop:role='["ls-amount"]'></anvil-component>
+      <anvil-component type="Label" name="yk" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <div class="ls-score">
+      <anvil-component type="Label" name="verdict" prop:role='["badge"]'></anvil-component>
+      <anvil-component type="Label" name="score_note" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <div class="ls-act">
+      <anvil-component type="DropDown" name="status_dd" prop:role='["ls-status"]'></anvil-component>
+      <anvil-component type="Button" name="edit_button" prop:text="Edit" prop:role='["btn", "btn-icon", "btn-sm", "ic-edit"]'></anvil-component>
+      <anvil-component type="Button" name="delete_button" prop:text="Delete" prop:role='["btn", "btn-icon", "btn-sm", "ic-trash"]'></anvil-component>
+    </div>
+  </article>
+</div>

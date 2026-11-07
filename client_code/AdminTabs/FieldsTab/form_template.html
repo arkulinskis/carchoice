@@ -1,0 +1,18 @@
+<div class="ui ft-wrap">
+  <p class="muted small ft-intro">Every column and filter on Explore. Change how they're labelled and grouped, which way is better (used to mark the best value on Compare), and whether each one is a filter or a default column. Imports add new fields here by themselves.</p>
+  <div class="fd-row fd-head" aria-hidden="true">
+    <span>Field</span><span>Label</span><span>Group</span><span>Unit</span><span>Better when</span><span>Shown as</span><span></span>
+  </div>
+  <anvil-component type="RepeatingPanel" name="fields_panel" prop:item_template="CarChoice.Items.FieldRow" prop:role='["fd-list"]'></anvil-component>
+  <section class="ui-card ft-add">
+    <h2>Add a field</h2>
+    <p class="muted small">For a measurement you plan to fill in with an import (the import also adds it on its own when the column is new).</p>
+    <div class="ft-add-grid">
+      <label class="ui-field"><span>Label</span><anvil-component type="TextBox" name="new_label" prop:placeholder="e.g. Insurance group"></anvil-component></label>
+      <label class="ui-field"><span>Kind</span><anvil-component type="DropDown" name="new_kind"></anvil-component></label>
+      <label class="ui-field"><span>Group</span><anvil-component type="TextBox" name="new_group" prop:placeholder="e.g. Ownership"></anvil-component></label>
+      <label class="ui-field"><span>Unit</span><anvil-component type="TextBox" name="new_unit" prop:placeholder="optional"></anvil-component></label>
+      <anvil-component type="Button" name="add_button" prop:text="Add field" prop:role='["btn", "btn-primary", "ic-plus"]'></anvil-component>
+    </div>
+  </section>
+</div>

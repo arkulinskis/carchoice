@@ -1,0 +1,15 @@
+<div class="sr-wrap">
+  <article class="sr-row">
+    <div class="sr-main">
+      <a class="sr-name" anvil:name="name_link" href="#explore"><anvil-component type="Label" name="name" prop:role='["sr-title"]' bind:text="self.item['name']"></anvil-component></a>
+      <anvil-component type="Label" name="summary" prop:role='["sr-summary"]'></anvil-component>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <div class="sr-act">
+      <anvil-component type="Button" name="open_button" prop:text="Open" prop:role='["btn", "btn-sm", "btn-primary", "ic-sliders"]'></anvil-component>
+      <anvil-component type="Button" name="copy_button" prop:text="Copy link" prop:role='["btn", "btn-sm", "ic-link"]'></anvil-component>
+      <anvil-component type="Button" name="rename_button" prop:text="Rename" prop:role='["btn", "btn-icon", "btn-sm", "ic-edit"]'></anvil-component>
+      <anvil-component type="Button" name="delete_button" prop:text="Delete" prop:role='["btn", "btn-icon", "btn-sm", "ic-trash"]'></anvil-component>
+    </div>
+  </article>
+</div>

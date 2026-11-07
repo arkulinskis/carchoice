@@ -1,0 +1,12 @@
+<div class="mk-wrap">
+  <article class="mk-row">
+    <div class="mk-main">
+      <div class="mk-top">
+        <anvil-component type="Link" name="site_link" prop:role='["mk-name"]' bind:text="self.item['name']" bind:url="self.item['url']"></anvil-component>
+        <anvil-component type="Label" name="kind" prop:role='["badge"]' bind:text="self.item['kind']"></anvil-component>
+      </div>
+      <anvil-component type="Label" name="notes" prop:role='["mk-notes"]' bind:text="self.item['notes']"></anvil-component>
+      <anvil-component type="Label" name="host" prop:role='["fine-print"]'></anvil-component>
+    </div>
+  </article>
+</div>

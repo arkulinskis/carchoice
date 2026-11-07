@@ -1,0 +1,69 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ex-page">
+      <div class="ex-head">
+        <div class="ex-title">
+          <anvil-component type="Label" name="title" prop:text="Explore every model" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["ex-sub"]' prop:text="Filter by any spec, star up to five cars, then search the marketplaces for them."></anvil-component>
+        </div>
+        <div class="ex-actions">
+          <anvil-component type="Button" name="share_button" prop:text="Copy link" prop:role='["btn", "btn-sm", "ic-link"]'></anvil-component>
+          <anvil-component type="Button" name="save_button" prop:text="Save search" prop:role='["btn", "btn-sm", "btn-primary", "ic-check"]'></anvil-component>
+        </div>
+      </div>
+
+      <div class="ex-grid">
+        <div class="ex-main">
+          <anvil-component type="CarChoice.Components.Explorer" name="explorer"></anvil-component>
+        </div>
+
+        <aside class="ex-side" aria-label="Search for these cars">
+          <section class="ex-card">
+            <anvil-component type="Label" name="q_title" prop:text="Search for these" prop:role='["ex-h"]'></anvil-component>
+            <anvil-component type="Label" name="q_explain" prop:role='["fine-print"]'></anvil-component>
+            <label class="ui-field"><span>Search words</span>
+              <anvil-component type="TextBox" name="q_box"></anvil-component>
+            </label>
+            <div class="ex-copy">
+              <anvil-component type="Button" name="copy_q_button" prop:text="Copy words" prop:role='["btn", "btn-sm", "ic-copy"]'></anvil-component>
+              <anvil-component type="Link" name="google_link" prop:text="Search the web" prop:role='["ex-google", "ic-external"]'></anvil-component>
+            </div>
+            <div class="ex-prefs">
+              <label class="ui-field"><span>Budget</span><anvil-component type="TextBox" name="budget_box" prop:placeholder="30000"></anvil-component></label>
+              <label class="ui-field"><span anvil:dom-node="km_cap">Max km</span><anvil-component type="TextBox" name="km_box" prop:placeholder="80000"></anvil-component></label>
+              <label class="ui-field"><span>Year from</span><anvil-component type="TextBox" name="year_box" prop:placeholder="2020"></anvil-component></label>
+              <label class="ui-field"><span>Near</span><anvil-component type="TextBox" name="place_box" prop:placeholder="City or postcode"></anvil-component></label>
+            </div>
+            <anvil-component type="Label" name="prefs_line" prop:role='["fine-print"]'></anvil-component>
+            <label class="ui-field"><span>Where to look</span>
+              <anvil-component type="DropDown" name="region_dd"></anvil-component>
+            </label>
+            <anvil-component type="RepeatingPanel" name="links_panel" prop:item_template="CarChoice.Items.QueryLink" prop:role='["ql-list"]'></anvil-component>
+            <anvil-component type="Label" name="guides" prop:role='["fine-print"]'></anvil-component>
+            <a class="ex-more" href="#markets">Every marketplace and price guide</a>
+          </section>
+
+          <section class="ex-card">
+            <anvil-component type="Label" name="pop_title" prop:text="Most shortlisted" prop:role='["ex-h"]'></anvil-component>
+            <anvil-component type="RepeatingPanel" name="popular_panel" prop:item_template="CarChoice.Items.MiniCar" prop:role='["mc-list"]'></anvil-component>
+            <anvil-component type="Label" name="pop_empty" prop:text="Nobody has shortlisted a car yet." prop:role='["fine-print"]' prop:visible="false"></anvil-component>
+          </section>
+        </aside>
+      </div>
+
+      <div class="ex-tray" anvil:name="tray" role="region" aria-label="Your five">
+        <div class="ex-tray-in">
+          <div class="ex-tray-label">
+            <anvil-component type="Label" name="tray_title" prop:text="Your five" prop:role='["tr-title"]'></anvil-component>
+            <anvil-component type="Label" name="tray_count" prop:role='["fine-print"]'></anvil-component>
+          </div>
+          <anvil-component type="RepeatingPanel" name="tray_panel" prop:item_template="CarChoice.Items.TrayChip" prop:role='["tr-slots"]'></anvil-component>
+          <div class="ex-tray-act">
+            <anvil-component type="Button" name="compare_button" prop:text="Compare" prop:role='["btn", "btn-sm", "btn-primary", "ic-scale"]'></anvil-component>
+            <anvil-component type="Button" name="five_button" prop:text="Open your five" prop:role='["btn", "btn-sm", "ic-star"]'></anvil-component>
+          </div>
+        </div>
+      </div>
+    </div>
+  </anvil-block>
+</anvil-form>

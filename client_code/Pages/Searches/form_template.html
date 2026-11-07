@@ -1,0 +1,20 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap sr-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Saved searches" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+        <a class="ui-btn primary" href="#explore"><i class="ic ic-sliders"></i>New search</a>
+      </div>
+      <anvil-component type="RepeatingPanel" name="list_panel" prop:item_template="CarChoice.Items.SearchRow" prop:role='["sr-list"]'></anvil-component>
+      <div class="ui-empty" anvil:name="empty">
+        <i class="ic ic-search"></i>
+        <anvil-component type="Label" name="empty_title" prop:text="No saved searches yet" prop:role='["empty-h"]'></anvil-component>
+        <p>Set filters on Explore and press Save search: they come back here, ready to open or share.</p>
+        <a class="ui-btn" href="#explore">Open Explore</a>
+      </div>
+    </div>
+  </anvil-block>
+</anvil-form>

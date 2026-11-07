@@ -1,0 +1,13 @@
+<div class="ac-wrap">
+  <div class="ac-row" anvil:name="row">
+    <div class="ac-main">
+      <a anvil:name="link" href="#explore"><anvil-component type="Label" name="name" prop:role='["ac-title"]' bind:text="self.item['name']"></anvil-component></a>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <anvil-component type="Label" name="status" prop:role='["badge"]'></anvil-component>
+    <div class="ac-act">
+      <anvil-component type="Button" name="toggle_button" prop:role='["btn", "btn-sm"]'></anvil-component>
+      <anvil-component type="Button" name="delete_button" prop:text="Delete" prop:role='["btn", "btn-icon", "btn-sm", "btn-danger", "ic-trash"]'></anvil-component>
+    </div>
+  </div>
+</div>

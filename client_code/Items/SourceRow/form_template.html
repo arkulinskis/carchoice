@@ -1,0 +1,17 @@
+<div class="so-wrap">
+  <article class="so-row">
+    <div class="so-main">
+      <div class="so-top">
+        <anvil-component type="Label" name="title" prop:role='["so-title"]' bind:text="self.item['title']"></anvil-component>
+        <anvil-component type="Label" name="status" prop:role='["badge"]' bind:text="self.item['status']"></anvil-component>
+      </div>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print"]'></anvil-component>
+      <anvil-component type="Label" name="notes" prop:role='["so-notes"]' bind:text="self.item['notes']" bind:visible="bool(self.item['notes'])"></anvil-component>
+      <anvil-component type="Link" name="url_link" prop:role='["so-link"]' bind:text="self.item['url']" bind:url="self.item['url']" bind:visible="bool(self.item['url'])"></anvil-component>
+    </div>
+    <div class="so-act">
+      <anvil-component type="Button" name="edit_button" prop:text="Edit" prop:role='["btn", "btn-icon", "btn-sm", "ic-edit"]'></anvil-component>
+      <anvil-component type="Button" name="delete_button" prop:text="Delete" prop:role='["btn", "btn-icon", "btn-sm", "btn-danger", "ic-trash"]'></anvil-component>
+    </div>
+  </article>
+</div>

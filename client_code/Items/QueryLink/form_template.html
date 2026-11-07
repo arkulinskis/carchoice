@@ -1,0 +1,9 @@
+<div class="ql-wrap">
+  <div class="ql-row">
+    <div class="ql-main">
+      <anvil-component type="Link" name="open_link" prop:role='["ql-name", "ic-external"]' bind:text="self.item['name']" bind:url="self.item['open_url']"></anvil-component>
+      <anvil-component type="Label" name="notes" prop:role='["fine-print", "ql-notes"]' bind:text="self.item['notes']"></anvil-component>
+    </div>
+    <anvil-component type="Label" name="kind" prop:role='["badge"]' bind:text="self.item['kind']"></anvil-component>
+  </div>
+</div>

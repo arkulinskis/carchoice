@@ -1,0 +1,14 @@
+<div class="im-wrap">
+  <article class="im-row">
+    <div class="im-main">
+      <div class="im-top">
+        <anvil-component type="Label" name="filename" prop:role='["im-title"]' bind:text="self.item['filename']"></anvil-component>
+        <anvil-component type="Label" name="status" prop:role='["badge"]'></anvil-component>
+      </div>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print"]'></anvil-component>
+      <anvil-component type="Label" name="counts" prop:role='["im-counts"]'></anvil-component>
+      <anvil-component type="Label" name="notes" prop:role='["fine-print", "im-notes"]' bind:text="'Problems: ' + self.item['notes']" bind:visible="bool(self.item['notes'])"></anvil-component>
+    </div>
+    <anvil-component type="Button" name="undo_button" prop:text="Remove the cars it added" prop:role='["btn", "btn-sm", "btn-danger", "ic-trash"]'></anvil-component>
+  </article>
+</div>

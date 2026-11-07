@@ -1,0 +1,15 @@
+<div class="ui dlg find-listings">
+  <anvil-component type="Label" name="heading" prop:role='["dlg-title"]'></anvil-component>
+  <anvil-component type="Label" name="prefs_line" prop:role='["fine-print"]'></anvil-component>
+  <div class="fl-top">
+    <label class="ui-field"><span>Search words</span><anvil-component type="TextBox" name="words_box"></anvil-component></label>
+    <label class="ui-field"><span>Where</span><anvil-component type="DropDown" name="region_dd"></anvil-component></label>
+  </div>
+  <anvil-component type="RepeatingPanel" name="links_panel" prop:item_template="CarChoice.Items.QueryLink" prop:role='["ql-list"]'></anvil-component>
+  <anvil-component type="Label" name="guides" prop:role='["fine-print", "fl-guides"]'></anvil-component>
+  <p class="small muted">Set price, mileage and distance with each site's own filters. When you find one, come back and save it as a listing.</p>
+  <div class="ui-row end">
+    <anvil-component type="Button" name="close_button" prop:text="Done" prop:role='["btn"]'></anvil-component>
+    <anvil-component type="Button" name="add_button" prop:text="Save a listing" prop:role='["btn", "btn-primary", "ic-link"]'></anvil-component>
+  </div>
+</div>

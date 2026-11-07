@@ -1,0 +1,17 @@
+<div class="fd-wrap">
+  <div class="fd-row">
+    <div class="fd-key">
+      <anvil-component type="Label" name="key" prop:role='["fd-k"]' bind:text="self.item['key']"></anvil-component>
+      <anvil-component type="Label" name="info" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <label class="ui-field"><span>Label</span><anvil-component type="TextBox" name="label_box"></anvil-component></label>
+    <label class="ui-field"><span>Group</span><anvil-component type="TextBox" name="group_box"></anvil-component></label>
+    <label class="ui-field"><span>Unit</span><anvil-component type="TextBox" name="unit_box"></anvil-component></label>
+    <label class="ui-field"><span>Better when</span><anvil-component type="DropDown" name="better_dd"></anvil-component></label>
+    <div class="fd-checks">
+      <anvil-component type="CheckBox" name="filter_box" prop:text="Filter"></anvil-component>
+      <anvil-component type="CheckBox" name="show_box" prop:text="Column"></anvil-component>
+    </div>
+    <anvil-component type="Button" name="save_button" prop:text="Save" prop:role='["btn", "btn-sm"]'></anvil-component>
+  </div>
+</div>

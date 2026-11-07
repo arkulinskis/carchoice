@@ -1,0 +1,42 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap pk-page">
+      <div class="ui-page-head">
+        <div>
+          <anvil-component type="Label" name="title" prop:text="Your five" prop:role='["page-title"]'></anvil-component>
+          <anvil-component type="Label" name="sub" prop:role='["fine-print"]'></anvil-component>
+        </div>
+        <div class="ui-row">
+          <anvil-component type="Button" name="compare_button" prop:text="Compare them" prop:role='["btn", "btn-primary", "ic-scale"]'></anvil-component>
+          <a class="ui-btn" href="#explore"><i class="ic ic-sliders"></i>Explore more</a>
+        </div>
+      </div>
+
+      <section class="pk-prefs" aria-label="Your search preferences">
+        <div class="pk-prefs-text">
+          <anvil-component type="Label" name="prefs_title" prop:text="What you're looking for" prop:role='["ex-h"]'></anvil-component>
+          <p class="small muted">These go into every marketplace search CarChoice makes for you.</p>
+        </div>
+        <label class="ui-field"><span>Budget</span><anvil-component type="TextBox" name="budget_box" prop:placeholder="30000"></anvil-component></label>
+        <label class="ui-field"><span>Currency</span><anvil-component type="DropDown" name="currency_dd"></anvil-component></label>
+        <label class="ui-field"><span anvil:dom-node="km_cap">Max km</span><anvil-component type="TextBox" name="km_box" prop:placeholder="80000"></anvil-component></label>
+        <label class="ui-field"><span>Year from</span><anvil-component type="TextBox" name="year_box" prop:placeholder="2020"></anvil-component></label>
+        <label class="ui-field"><span>Near</span><anvil-component type="TextBox" name="place_box" prop:placeholder="City or postcode"></anvil-component></label>
+        <label class="ui-field"><span>Region</span><anvil-component type="DropDown" name="region_dd"></anvil-component></label>
+        <anvil-component type="Button" name="prefs_button" prop:text="Save" prop:role='["btn", "ic-check"]'></anvil-component>
+      </section>
+
+      <anvil-component type="RepeatingPanel" name="cards_panel" prop:item_template="CarChoice.Items.PickCard" prop:role='["pk-list"]'></anvil-component>
+
+      <section class="pk-how">
+        <h2>From five to one</h2>
+        <ol>
+          <li><b>Find them for sale.</b> Each card opens searches on the marketplaces of your region.</li>
+          <li><b>Save the listings you like.</b> Paste the link with its price, year and mileage.</li>
+          <li><b>Let the numbers talk.</b> Listings of the same model are put on the same footing (age and mileage), so the well-priced one stands out.</li>
+          <li><b>Check before you pay.</b> A history report, an independent inspection, and the price guides on <a href="#markets">Where to buy</a>.</li>
+        </ol>
+      </section>
+    </div>
+  </anvil-block>
+</anvil-form>

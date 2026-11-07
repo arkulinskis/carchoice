@@ -1,0 +1,67 @@
+<anvil-form layout="CarChoice.Layouts.Shell">
+  <anvil-block slot="content">
+    <div class="ui-wrap cr-page">
+      <a class="cr-back" href="#explore"><i class="ic ic-back"></i>Back to Explore</a>
+
+      <div class="ui-empty" anvil:name="missing">
+        <i class="ic ic-car"></i>
+        <h2>That car isn't in the catalogue</h2>
+        <p>It may have been removed or renamed. Find it again on Explore.</p>
+        <a class="ui-btn primary" href="#explore">Open Explore</a>
+      </div>
+
+      <div anvil:name="sheet">
+        <header class="cr-head">
+          <div class="cr-titles">
+            <anvil-component type="Label" name="make" prop:role='["cr-make"]'></anvil-component>
+            <anvil-component type="Label" name="model" prop:role='["cr-model"]'></anvil-component>
+            <anvil-component type="Label" name="tags" prop:role='["cr-tags"]'></anvil-component>
+          </div>
+          <div class="cr-cta">
+            <anvil-component type="Label" name="price" prop:role='["cr-price"]'></anvil-component>
+            <anvil-component type="Label" name="price_note" prop:role='["fine-print"]' prop:text="starting price new (approximate)"></anvil-component>
+            <div class="cr-buttons">
+              <anvil-component type="Button" name="pick_button" prop:role='["btn", "btn-primary", "ic-star"]'></anvil-component>
+              <anvil-component type="Button" name="find_button" prop:text="Find for sale" prop:role='["btn", "ic-search"]'></anvil-component>
+            </div>
+            <anvil-component type="Label" name="pickers" prop:role='["fine-print"]'></anvil-component>
+          </div>
+        </header>
+
+        <div class="cr-keys" role="list" aria-label="Key figures">
+          <div class="cr-key" role="listitem" anvil:name="k1"><anvil-component type="Label" name="k1_v" prop:role='["cr-kv"]'></anvil-component><anvil-component type="Label" name="k1_l" prop:role='["cr-kl"]'></anvil-component></div>
+          <div class="cr-key" role="listitem" anvil:name="k2"><anvil-component type="Label" name="k2_v" prop:role='["cr-kv"]'></anvil-component><anvil-component type="Label" name="k2_l" prop:role='["cr-kl"]'></anvil-component></div>
+          <div class="cr-key" role="listitem" anvil:name="k3"><anvil-component type="Label" name="k3_v" prop:role='["cr-kv"]'></anvil-component><anvil-component type="Label" name="k3_l" prop:role='["cr-kl"]'></anvil-component></div>
+          <div class="cr-key" role="listitem" anvil:name="k4"><anvil-component type="Label" name="k4_v" prop:role='["cr-kv"]'></anvil-component><anvil-component type="Label" name="k4_l" prop:role='["cr-kl"]'></anvil-component></div>
+          <div class="cr-key" role="listitem" anvil:name="k5"><anvil-component type="Label" name="k5_v" prop:role='["cr-kv"]'></anvil-component><anvil-component type="Label" name="k5_l" prop:role='["cr-kl"]'></anvil-component></div>
+        </div>
+
+        <div class="cr-grid">
+          <div class="cr-main">
+            <div class="cr-units">
+              <span class="small muted">Units</span>
+              <div class="ui-seg" role="group" aria-label="Units">
+                <button type="button" anvil:name="u_metric" anvil:on-dom:click="self.units_click" data-u="metric">Metric</button>
+                <button type="button" anvil:name="u_imperial" anvil:on-dom:click="self.units_click" data-u="imperial">Imperial</button>
+              </div>
+            </div>
+            <anvil-component type="RepeatingPanel" name="groups_panel" prop:item_template="CarChoice.Items.SpecGroup" prop:role='["sg-list"]'></anvil-component>
+            <anvil-component type="Label" name="source" prop:role='["fine-print", "cr-source"]'></anvil-component>
+          </div>
+          <aside class="cr-side">
+            <section class="ex-card" anvil:name="brand_box">
+              <anvil-component type="Label" name="brand_title" prop:role='["ex-h"]'></anvil-component>
+              <anvil-component type="Label" name="brand_line" prop:role='["fine-print"]'></anvil-component>
+              <anvil-component type="Label" name="warranty" prop:role='["fine-print"]'></anvil-component>
+              <anvil-component type="Link" name="brand_site" prop:text="Official website" prop:role='["ic-external"]'></anvil-component>
+            </section>
+            <section class="ex-card">
+              <anvil-component type="Label" name="sim_title" prop:text="Similar models" prop:role='["ex-h"]'></anvil-component>
+              <anvil-component type="RepeatingPanel" name="similar_panel" prop:item_template="CarChoice.Items.MiniCar" prop:role='["mc-list"]'></anvil-component>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </anvil-block>
+</anvil-form>

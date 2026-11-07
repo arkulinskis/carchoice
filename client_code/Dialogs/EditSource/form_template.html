@@ -1,0 +1,17 @@
+<div class="ui dlg edit-source">
+  <anvil-component type="Label" name="heading" prop:text="Data source" prop:role='["dlg-title"]'></anvil-component>
+  <div class="al-grid">
+    <label class="ui-field al-wide"><span>Title</span><anvil-component type="TextBox" name="title_box" prop:placeholder="e.g. Auto Katalog 2026"></anvil-component></label>
+    <label class="ui-field"><span>Kind</span><anvil-component type="DropDown" name="kind_dd"></anvil-component></label>
+    <label class="ui-field"><span>Status</span><anvil-component type="DropDown" name="status_dd"></anvil-component></label>
+    <label class="ui-field"><span>Publisher</span><anvil-component type="TextBox" name="publisher_box"></anvil-component></label>
+    <label class="ui-field"><span>Year</span><anvil-component type="TextBox" name="year_box"></anvil-component></label>
+    <label class="ui-field al-wide"><span>Link <em>(optional)</em></span><anvil-component type="TextBox" name="url_box" prop:placeholder="https://..."></anvil-component></label>
+    <label class="ui-field al-wide"><span>Notes</span><anvil-component type="TextArea" name="notes_box" prop:height="80" prop:placeholder="What it covers, licence, who is getting it..."></anvil-component></label>
+  </div>
+  <anvil-component type="Label" name="message" prop:role='["msg-error"]' prop:visible="false"></anvil-component>
+  <div class="ui-row end">
+    <anvil-component type="Button" name="cancel_button" prop:text="Cancel" prop:role='["btn", "btn-ghost"]'></anvil-component>
+    <anvil-component type="Button" name="save_button" prop:text="Save" prop:role='["btn", "btn-primary", "ic-check"]'></anvil-component>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="ui ct-wrap">
+  <div class="ui-row ad-search">
+    <anvil-component type="TextBox" name="search_box" prop:placeholder="Search make, model or source" prop:role='["ad-search-box"]'></anvil-component>
+    <anvil-component type="Button" name="search_button" prop:text="Search" prop:role='["btn", "ic-search"]'></anvil-component>
+    <anvil-component type="Label" name="count" prop:role='["fine-print"]'></anvil-component>
+  </div>
+  <p class="small muted">Hidden cars stay in the data (and in exports) but leave Explore. Delete removes a car for good; to change figures, export, edit and import again.</p>
+  <anvil-component type="RepeatingPanel" name="cars_panel" prop:item_template="CarChoice.Items.AdminCarRow" prop:role='["ac-list"]'></anvil-component>
+</div>

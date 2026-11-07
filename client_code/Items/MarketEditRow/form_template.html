@@ -1,0 +1,13 @@
+<div class="me-wrap">
+  <div class="me-row" anvil:name="row">
+    <div class="me-main">
+      <anvil-component type="Label" name="name" prop:role='["me-title"]' bind:text="self.item['name']"></anvil-component>
+      <anvil-component type="Label" name="meta" prop:role='["fine-print"]'></anvil-component>
+    </div>
+    <anvil-component type="Label" name="search" prop:role='["badge"]'></anvil-component>
+    <div class="me-act">
+      <anvil-component type="Button" name="edit_button" prop:text="Edit" prop:role='["btn", "btn-icon", "btn-sm", "ic-edit"]'></anvil-component>
+      <anvil-component type="Button" name="delete_button" prop:text="Delete" prop:role='["btn", "btn-icon", "btn-sm", "btn-danger", "ic-trash"]'></anvil-component>
+    </div>
+  </div>
+</div>
