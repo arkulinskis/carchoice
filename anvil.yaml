@@ -647,14 +647,26 @@ db_schema:
     server: full
     title: Users
 metadata:
-  description: 'CarChoice: filter hundreds of car models by 40+ specs, narrow them to your five, then search the marketplaces
-    and save the listings you find.'
-  logo_img: asset:icon-512.png
-  title: CarChoice
+  description: "Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that's priced well."
+  logo_img: "asset:icon-512.png"
+  title: "CarChoice: compare car specs and pick your five"
 name: CarChoice
 native_deps:
   head_html: |
     <script src="_/theme/legal-kit.js?v=eabfa9bf77"></script>
+    <!-- seo:start (APP_MAKER/seo: edit seo/apps/carchoice.json and run seo.py, not here) -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="keywords" content="car comparison tool, compare car specs, which car should I buy, car finder by specs, used car price check, electric car range comparison, SUV comparison table, car shortlist, car buying research, save car listings">
+    <meta name="author" content="Arkvital">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CarChoice">
+    <meta property="og:title" content="CarChoice: compare car specs and pick your five">
+    <meta property="og:description" content="Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that&#x27;s priced well.">
+    <meta property="og:locale" content="en_CA">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CarChoice: compare car specs and pick your five">
+    <meta name="twitter:description" content="Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that&#x27;s priced well.">
+    <!-- seo:end -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#f4f5f2">
     <meta name="apple-mobile-web-app-capable" content="yes">
