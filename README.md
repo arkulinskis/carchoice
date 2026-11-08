@@ -6,7 +6,7 @@ which one is priced well. Built on [Anvil](https://anvil.works) as native Anvil 
 custom components, RepeatingPanels) with one JavaScript engine for the filter table.
 
 - **App repo:** github.com/arkulinskis/carchoice (branch `master`). Anvil pulls `master`.
-- **Live:** not published yet (planned address https://carchoice.anvil.app).
+- **Live:** https://carchoice.anvil.app
 
 ## What it does
 

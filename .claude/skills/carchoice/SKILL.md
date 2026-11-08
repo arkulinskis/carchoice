@@ -9,7 +9,7 @@ description: Context, workflow and recipes for CarChoice (folder carchoice), the
 
 **Where it lives:**
 - Folder `C:\Users\arkvi\Documents\CLAUDE\carchoice\` = the git clone of **github.com/arkulinskis/carchoice**, branch `master`.
-  "git" layout: the folder *is* the Anvil app. Anvil pulls master; pushing is the deploy. Live: not published yet (planned https://carchoice.anvil.app).
+  "git" layout: the folder *is* the Anvil app. Anvil pulls master; pushing is the deploy. Live: https://carchoice.anvil.app (legal + SEO use this address).
 - Made from `C:\Users\arkvi\Documents\CLAUDE\APP_MAKER\template-forms` (native Anvil Forms, Nov 2026). Anvil's own agent
   skills describe the same model: `client-forms`, `data-models`, `server-code`, `client-modules`, `anvil-yaml`
   (github.com/anvil-works/anvil-agent-references; see APP_MAKER/ANVIL_NOTES.md, "Native Anvil Forms").
