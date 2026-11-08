@@ -655,6 +655,7 @@ native_deps:
   head_html: |
     <script src="_/theme/legal-kit.js?v=eabfa9bf77"></script>
     <!-- seo:start (APP_MAKER/seo: edit seo/apps/carchoice.json and run seo.py, not here) -->
+    <link rel="canonical" href="https://carchoice.anvil.app/">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="keywords" content="car comparison tool, compare car specs, which car should I buy, car finder by specs, used car price check, electric car range comparison, SUV comparison table, car shortlist, car buying research, save car listings">
     <meta name="author" content="Arkvital">
@@ -663,9 +664,16 @@ native_deps:
     <meta property="og:title" content="CarChoice: compare car specs and pick your five">
     <meta property="og:description" content="Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that&#x27;s priced well.">
     <meta property="og:locale" content="en_CA">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://carchoice.anvil.app/">
+    <meta property="og:image" content="https://carchoice.anvil.app/_/theme/og-image.png">
+    <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CarChoice: Narrow hundreds of cars down to your five">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CarChoice: compare car specs and pick your five">
     <meta name="twitter:description" content="Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that&#x27;s priced well.">
+    <meta name="twitter:image" content="https://carchoice.anvil.app/_/theme/og-image.png">
+    <link rel="alternate" type="text/plain" title="CarChoice for AI assistants" href="https://carchoice.anvil.app/llms.txt">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://carchoice.anvil.app/#app", "name": "CarChoice", "url": "https://carchoice.anvil.app/", "description": "Filter 268 car models by price, power, range, cargo, seats, towing and features, shortlist five, search the marketplaces and spot the listing that's priced well.", "image": "https://carchoice.anvil.app/_/theme/og-image.png", "inLanguage": "en", "publisher": {"@id": "https://arkvital.com/#org"}, "keywords": "car comparison tool, compare car specs, which car should I buy, car finder by specs, used car price check, electric car range comparison, SUV comparison table, car shortlist, car buying research, save car listings", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript and a modern web browser", "featureList": ["268 car models from 52 brands in one sortable, full-width table", "44 filters with histograms, live counts and yes/no features", "Metric or imperial units, choose your columns, compact rows", "Shortlist five cars and compare them side by side", "Ready-made searches on marketplaces in six regions", "Save listings instead of bookmarks, with a fair-price check", "Saved and shareable searches", "Brand directory with countries, groups and warranties", "Free, and no account needed to explore"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}, "audience": {"@type": "Audience", "audienceType": "People researching which car to buy, new or used, who like to compare the numbers before they decide"}}, {"@type": "WebSite", "@id": "https://carchoice.anvil.app/#site", "url": "https://carchoice.anvil.app/", "name": "CarChoice", "publisher": {"@id": "https://arkvital.com/#org"}}, {"@type": "Organization", "@id": "https://arkvital.com/#org", "name": "Arkvital", "url": "https://arkvital.com", "email": "arkvital@outlook.com", "address": {"@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA"}}]}</script>
     <!-- seo:end -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#f4f5f2">
