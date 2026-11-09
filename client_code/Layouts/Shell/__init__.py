@@ -67,7 +67,7 @@ class Shell(ShellTemplate):
             self.menu.visible = False
 
     def _key(self, event):
-        if event.key == "Escape" and self.menu.visible:
+        if getattr(event, "key", None) == "Escape" and self.menu.visible:
             self.menu.visible = False
             state.focus(self.avatar_button)
 
